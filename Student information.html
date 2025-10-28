@@ -1,0 +1,48 @@
+<html> 
+<head>
+<title> Student Information </title> 
+<script type="text/javascript"> 
+function Calc()
+{
+var M1 = parseInt(document.getElementById("M1").value);
+var M2 = parseInt(document.getElementById("M2").value); 
+var M3 = parseInt(document.getElementById("M3").value); 
+var total = M1+ M2 + M3;
+var avg = total/3;
+var result;
+if (avg <=40)
+result ="fail";
+else
+result = "Pass";
+var Grade='';
+if (avg >= 80) 
+Grade="A";
+else if (avg>=60) 
+Grade = 'B';
+else if (avg >= 40)
+Grade = "C";
+else
+Grade = "fail";
+document.getElementById("tot").innerHTML = "TOTAL = " +total;
+document.getElementById("avg").innerHTML="AVERAGE="+avg;
+document.getElementById("res").innerHTML = "RESULT = "+result;
+document.getElementById("grade").innerHTML = " GRADE="+Grade;
+}
+</script> 
+</head>
+<body>
+<form>
+<h1> STUDENT INFORMATION </h1>
+NAME: <input type="text" id="name"> <br> 
+Marks1:<input type="number" id="M1"> <br> 
+Marks2:<input type="number" id="M2"> <br> 
+Marks3:<input type="number" id="M3"> <br>
+<input type="button" value="CALCULATE" onclick="Calc()">
+<p id="tot"> </p>
+<p id="avg"> </p>
+<p id="res"></p>
+<p id="grade"></p> 
+</form>
+</body>
+</html>
+

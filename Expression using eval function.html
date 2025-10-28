@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Mathematical Evaluation</title>
+    <script type="text/javascript">
+    function calc() {
+        var exp = document.getElementById("exp").value;
+        try {
+            var res = eval(exp);
+            document.getElementById("result").innerHTML = res;
+        } catch (error) {
+            document.getElementById("result").innerHTML = "Error: Invalid Expression";
+        }
+    }
+    </script>
+</head>
+<body>
+    <form>
+        Enter an expression: <input type="text" id="exp"><br><br>
+        <input type="button" value="Calculate" onclick="calc()">
+        <p id="result"></p>
+    </form>
+</body>
+</html>

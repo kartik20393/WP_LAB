@@ -1,0 +1,26 @@
+<html> 
+<head>
+<title> Sum of Natural Number </title> 
+<script type="text/javascript">
+function s(){ 
+var i;
+var sum=0;
+var m = parseInt(document.getElementById("num").value); 
+if (m>0)
+{
+for(i=1;i<=m;i++)
+sum = sum +i;
+alert("sum of " +m+" is =" + sum);
+}
+else 
+alert("Enter positive number");
+}
+</script> 
+</head>
+<body>
+<h1> SUM OF NATURAL NUMBERS ARE </h1>
+<label> Enter a number: </label>
+<input type="text" id="num" ><br>
+<input type="button" value="CALCULATE" onclick="s()"> 
+</body> 
+</html>

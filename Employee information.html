@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function e() {
+var Basicpay=parseInt(document.getElementById("Basicpay").value);
+var DA = (20/100) * Basicpay;
+var HRA = (12 / 100) * Basicpay;
+var Grosspay = Basicpay +DA+ HRA;
+var PF = (12/100) * Basicpay;
+var TAX= (10/100) *Grosspay;
+var Deduction = PF+TAX;
+var NETPAY = Grosspay - Deduction;
+document.getElementById("Result1").innerHTML= "BASICPAY" + Basicpay;
+document.getElementById("Result2").innerHTML= " DA="+DA;
+document.getElementById("Result3").innerHTML= "HRA = "+HRA;
+document.getElementById("Result4").innerHTML= "GROSS PAY=" + Grosspay;
+document.getElementById("Result5").innerHTML= " PF = " + PF;
+document.getElementById("Result6").innerHTML="TAX="+TAX;
+document.getElementById("Result7").innerHTML = "NETPAY="+ NETPAY;
+}
+</script> 
+</head>
+<body>
+<form>
+<h1>This EMPLOYEE INFORMATION FORM </h1><br><br>
+Enter BASIC PAY:<input type="number" id="Basicpay" ><br>
+<input type="button" value="CALCULATE" onclick="e()"><br>
+<h2> PAYROLL DETAILS </h2>
+<p id="Result1"> </p>
+<p id="Result2"> </p>
+<p id="Result3"> </p>
+<p id="Result4"> </p>
+<p id="Result5"> </p>
+<p id="Result6"> </p>
+<p id="Result7"> </p>
+</form> 
+</body>
+</html>
